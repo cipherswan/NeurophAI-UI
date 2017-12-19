@@ -14,6 +14,8 @@ public class Controller {
     public Button browseButton;
     public TextField outputDirectoryTextField;
     public Button setOutputButton;
+    public TextField neuralNetworkTextField;
+    public Button neuralNetworkButton;
 
     @FXML
     private void openFileChooser(ActionEvent actionEvent){
@@ -36,6 +38,17 @@ public class Controller {
 
         if (selectedDirectory != null) {
             outputDirectoryTextField.setText(selectedDirectory.getPath());
+        }
+    }
+
+    @FXML
+    private void setNeuralNetworkDirectory(ActionEvent actionEvent){
+
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        File selectedDirectory = directoryChooser.showDialog(null);
+
+        if (selectedDirectory != null) {
+            neuralNetworkTextField.setText(selectedDirectory.getPath());
         }
     }
 }

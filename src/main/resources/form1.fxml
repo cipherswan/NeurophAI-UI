@@ -9,7 +9,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
   <children>
@@ -54,17 +53,15 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
-          <font>
-            <Font size="18.0" />
-          </font>
-        </Label>
             <TextField fx:id="rawDataInputPATH" layoutX="27.0" layoutY="36.0" prefHeight="25.0" prefWidth="217.0" />
             <Button fx:id="browseButton" layoutX="251.0" layoutY="36.0" mnemonicParsing="false" onAction="#openFileChooser" text="Browse..." />
             <TextField fx:id="outputDirectoryTextField" layoutX="27.0" layoutY="87.0" prefHeight="25.0" prefWidth="217.0" />
             <Label layoutX="27.0" layoutY="19.0" text="Raw input file:" />
             <Label layoutX="27.0" layoutY="70.0" text="Output directory:" />
-            <Button fx:id="setOutputButton" layoutX="251.0" layoutY="87.0" mnemonicParsing="false" text="Set directory..." onAction="#setOutputDirectory" />
+            <Button fx:id="setOutputButton" layoutX="251.0" layoutY="87.0" mnemonicParsing="false" onAction="#setOutputDirectory" text="Set directory..." />
+            <TextField fx:id="neuralNetworkTextField" layoutX="28.0" layoutY="140.0" prefHeight="25.0" prefWidth="217.0" />
+            <Label layoutX="28.0" layoutY="123.0" text="Neural network path:" />
+            <Button fx:id="neuralNetworkButton" layoutX="251.0" layoutY="140.0" mnemonicParsing="false" onAction="#setNeuralNetworkDirectory" text="Set directory..." />
       </children>
     </AnchorPane>
   </children>
